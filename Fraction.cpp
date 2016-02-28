@@ -1,6 +1,5 @@
 #include "Fraction.h"
-int Fraction::getDen() {};
-int Fraction::getNum() {};
+
 int Fraction::setDen( int numer)
 {
 	numarator = numer;
