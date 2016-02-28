@@ -21,6 +21,10 @@ public:
 	{
 		cout << "destructor was called" << endl;
 	};
+	int getNum() { return numarator; };
+	int getDen() { return denominator; };
+	int setNum(int numer);
+	int setDen(int denom);
 
 };
 
