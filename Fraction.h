@@ -11,8 +11,16 @@ private:
 
 public:
 
-	Fraction();
-	~Fraction();
+	Fraction(int num = 1, int den=1, int whole =1)
+	{
+		numarator = num;
+		denominator = den;
+		whole_num = whole;
+	};
+	~Fraction()
+	{
+		cout << "destructor was called" << endl;
+	};
 
 };
 
