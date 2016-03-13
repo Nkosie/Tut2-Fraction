@@ -11,22 +11,15 @@ private:
 
 public:
 
-	Fraction(int num = 1, int den=1, int whole = 0)
-	{
-		numarator = num;
-		denominator = den;
-		whole_num = whole;
-	};
+	Fraction(int, int);
+
+	int getNum() { /*return numarator;*/ /*return denominator;*/ };
+	void setNum(int numer, int denom);
+	
 	~Fraction()
 	{
 		cout << "destructor was called" << endl;
 	};
-	int getNum() { return numarator; };
-	int getDen() { return denominator; };
-	int setNum(int numer, int denom);
-	int setDen(int denom);
-	int setWhole(int numer, int denom);
-
 };
 
 
