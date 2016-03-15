@@ -146,7 +146,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Fraction.cpp" />
     <ClCompile Include="FractionClass.cpp" />
   </ItemGroup>
   <ItemGroup>

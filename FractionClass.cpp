@@ -31,10 +31,48 @@ public:
 		}
 	}
 
+
 	void getNumDenom(int &num, int &denom)
 	{
 		num = numerator;
 		denom = denominator;
+	}
+
+	Fraction Add(Fraction b)
+	{
+		Fraction c;
+
+		c.numerator = (b.denominator*numerator) + (b.numerator*denominator);
+		c.denominator = b.denominator*denominator;
+		//c.print();
+		return c;
+	}
+
+	Fraction subtract(Fraction b)
+	{
+		Fraction s;
+		s.numerator= (b.denominator*numerator) - (b.numerator*denominator);
+		s.denominator = b.denominator*denominator;
+		/*s.print();*/
+		return s;
+	}
+
+	Fraction multiply(Fraction b)
+	{
+		Fraction m;
+		m.numerator = numerator*b.numerator;
+		m.denominator = denominator*b.denominator;
+	/*	m.print();*/
+		return m;
+	}
+
+	Fraction divide(Fraction b)
+	{
+		Fraction d;
+		d.numerator = numerator*b.denominator;
+		d.denominator = denominator*b.numerator;
+	/*	d.print();*/
+		return d;
 	}
 	void print()
 	{
@@ -72,9 +110,31 @@ public:
 
 int main()
 {
-	Fraction frac;
-	frac.setNumDenom(28, 12);
-	frac.print();
+	Fraction a(30, 12);
+	Fraction b(5, 4);
+	Fraction c;
+
+	cout << "The first one "<<endl;
+	a.print();
+
+	cout << "The second fraction " << endl;
+	b.print();
+
+	cout << "The added results  " << endl;
+	c = a.Add(b);
+	c.print();
+
+	cout << "The subtracted results  " << endl;
+	c = a.subtract(b);
+	c.print();
+
+	cout << "The multiplied results  " << endl;
+	c = a.multiply(b);
+	c.print();
+
+	cout << "The devided results  " << endl;
+	c = a.divide(b);
+	c.print();
+
+	return 0;
 }
-
-
