@@ -120,25 +120,25 @@ int main()
 	Fraction b(5, 4);
 	Fraction c;
 
-	cout << "The first one "<<endl;
+	cout << "The first one: "<<endl;
 	a.print();
 
-	cout << "The second fraction " << endl;
+	cout << "The second fraction: " << endl;
 	b.print();
 
-	cout << "The added results  " << endl;
+	cout << "The added results:  " << endl;
 	c = a.Add(b);
 	c.print();
 
-	cout << "The subtracted results  " << endl;
+	cout << "The subtracted results:  " << endl;
 	c = a.subtract(b);
 	c.print();
 
-	cout << "The multiplied results  " << endl;
+	cout << "The multiplied results:  " << endl;
 	c = a.multiply(b);
 	c.print();
 
-	cout << "The devided results  " << endl;
+	cout << "The devided results:  " << endl;
 	c = a.divide(b);
 	c.print();
 
