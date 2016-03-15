@@ -81,7 +81,7 @@ public:
 		numerator = numerator%denominator;
 		if (numerator == 0) {
 
-			cout << "My Fraction :" << WholeNum << endl;
+			cout << "My Fraction :" << WholeNum << endl << endl;
 		}
 		/*Here i am simplifying my fraction*/
 		else
@@ -97,10 +97,10 @@ public:
 
 					if (WholeNum == 0)
 					{
-						cout << "My Fraction :" << numerator << "/" << denominator << endl;
+						cout << "My Fraction :" << numerator << "/" << denominator <<endl<< endl;
 					}
 					else
-					cout << "My Fraction :" << WholeNum << " " << numerator << "/" << denominator << endl;
+					cout << "My Fraction :" << WholeNum << " " << numerator << "/" << denominator << endl << endl;
 
 				}
 
