@@ -93,8 +93,14 @@ public:
 				{
 					numerator = numerator / i;
 					denominator = denominator / i;
-					cout << "My Fraction :" << WholeNum << " " << numerator << "/" << denominator << endl;
+					
 
+					if (WholeNum == 0)
+					{
+						cout << "My Fraction :" << numerator << "/" << denominator << endl;
+					}
+					else
+					cout << "My Fraction :" << WholeNum << " " << numerator << "/" << denominator << endl;
 
 				}
 
