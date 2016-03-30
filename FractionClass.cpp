@@ -48,7 +48,7 @@ public:
 		return ad;
 	}
 
-	Fraction subtract(Fraction b)
+	Fraction operator-(Fraction b)
 	{
 		Fraction s;
 		s.numerator= (b.denominator*numerator) - (b.numerator*denominator);
@@ -57,7 +57,7 @@ public:
 		return s;
 	}
 
-	Fraction multiply(Fraction b)
+	Fraction operator*(Fraction b)
 	{
 		Fraction m;
 		m.numerator = numerator*b.numerator;
@@ -66,7 +66,7 @@ public:
 		return m;
 	}
 
-	Fraction divide(Fraction b)
+	Fraction operator/(Fraction b)
 	{
 		Fraction d;
 		d.numerator = numerator*b.denominator;
@@ -124,15 +124,15 @@ int main()
 	c.print();
 
 	cout << "The subtracted results:  " << endl;
-	c = a.subtract(b);
+	c = a-b;
 	c.print();
 
 	cout << "The multiplied results:  " << endl;
-	c = a.multiply(b);
+	c = a * b;
 	c.print();
 	 
 	cout << "The devided results:  " << endl;
-	c = a.divide(b);
+	c = a / b;
 	c.print();
 
 	return 0;
