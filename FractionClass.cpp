@@ -6,6 +6,7 @@ class Fraction
 {
 	int numerator;
 	int denominator;
+
 public:
 	Fraction()
 	{
@@ -38,14 +39,13 @@ public:
 		denom = denominator;
 	}
 
-	Fraction Add(Fraction b)
+	Fraction operator+(Fraction b)
 	{
-		Fraction c;
-
-		c.numerator = (b.denominator*numerator) + (b.numerator*denominator);
-		c.denominator = b.denominator*denominator;
+		Fraction ad;
+		ad.numerator = (b.denominator*numerator) + (b.numerator*denominator);
+		ad.denominator = b.denominator*denominator;
 		//c.print();
-		return c;
+		return ad;
 	}
 
 	Fraction subtract(Fraction b)
@@ -79,9 +79,10 @@ public:
 		/*Creating a mixed number fraction*/
 		int WholeNum = numerator / denominator;
 		numerator = numerator%denominator;
-		if (numerator == 0) {
 
-			cout << "My Fraction :" << WholeNum << endl << endl;
+		if (numerator == 0) 
+		{
+			cout << "My Fraction :\n" << WholeNum << endl << endl;
 		}
 		/*Here i am simplifying my fraction*/
 		else
@@ -93,41 +94,33 @@ public:
 				{
 					numerator = numerator / i;
 					denominator = denominator / i;
-					
 
 					if (WholeNum == 0)
 					{
-						cout << "My Fraction :" << numerator << "/" << denominator <<endl<< endl;
+						cout << "My Fraction :\n" << numerator << "/" << denominator <<endl<< endl;
 					}
 					else
-					cout << "My Fraction :" << WholeNum << " " << numerator << "/" << denominator << endl << endl;
-
+					cout << "My Fraction :\n" << WholeNum << " " << numerator << "/" << denominator << endl << endl;
 				}
-
-
-
 			}
-
 		}
-
 	}
 
 };
 
 int main()
 {
-	Fraction a(30, 12);
-	Fraction b(5, 4);
-	Fraction c;
+	Fraction c, b(1, 4), a(1, 4);
 
-	cout << "The first one: "<<endl;
+
+	cout << "The first one: \n";
 	a.print();
 
-	cout << "The second fraction: " << endl;
+	cout << "The second fraction: \n";
 	b.print();
 
 	cout << "The added results:  " << endl;
-	c = a.Add(b);
+	c = a + b;
 	c.print();
 
 	cout << "The subtracted results:  " << endl;
@@ -137,7 +130,7 @@ int main()
 	cout << "The multiplied results:  " << endl;
 	c = a.multiply(b);
 	c.print();
-
+	 
 	cout << "The devided results:  " << endl;
 	c = a.divide(b);
 	c.print();
